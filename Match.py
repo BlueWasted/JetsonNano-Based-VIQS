@@ -138,7 +138,7 @@ def match_img_Text(data):
 
 def commit_data(tuple_license):#写入数据库操作
     connect = pymysql.Connect(host='localhost', user='che_pai',
-                              password='yourpassword', database='vehicledb', charset='utf8')
+                              password='password', database='vehicledb', charset='utf8')
     cursor = connect.cursor(cursor=pymysql.cursors.DictCursor)
     sql = 'insert into info (typ, typ_conf, lic, lic_conf, date, time, path) values(%s, %s, %s, %s, %s, %s, %s);'
     typ = str(tuple_license[0])
